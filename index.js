@@ -11,12 +11,10 @@ const plantas = [
 
 function contenidoPlantas() {
     let informacionPlantas = "";
-
     for (const planta of plantas) {
         informacionPlantas += `<div class="col-md-3">
             <div class="card border border-success rounded-5 rounded-top-0 m-10">
-                    <img src="images/${planta.imagen}" class="mt-3" alt="${planta.nombre}">
-                </a>
+                <img src="images/${planta.imagen}" class="mt-3" alt="${planta.nombre}">
                 <div class="card-body text-center">
                     <p class="card-text text-info-emphasis">${planta.nombre}<br>$${planta.precio} ARS</p>
                     <p class="card-text"><button class="btn btn-outline-success rounded-4" onclick="agregarPlanta(${planta.id});">Añadir al carrito</button></p>
@@ -36,8 +34,9 @@ function agregarPlanta(id) {
     Swal.fire({
         text: "Se ha añadido al carrito",
         icon: "success"
-      });
+    });
     botonCarrito();
+    actualizarTotalValor();
 }
 
 function eliminarPlanta(id) {
@@ -47,9 +46,10 @@ function eliminarPlanta(id) {
     Swal.fire({
         text: "El item se ha eliminado correctamente",
         icon: "success"
-      });
+    });
     contenidoCarrito();
     botonCarrito();
+    actualizarTotalValor();
 }
 
 function botonCarrito() {
@@ -68,12 +68,19 @@ function eliminarCarrito() {
         icon: "warning",
         title: "Oops...",
         text: "Tu carrito está vacío!",
-        footer: '<a href="index.html">Quisieras volver al inicio?</a>'
-      });
+        footer: '<a href="index.html">¿Quisieras volver al inicio?</a>'
+    });
     contenidoCarrito();
     botonCarrito();
+    actualizarTotalValor();
+}
+
+function actualizarTotalValor() {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    let totalValor = carrito.reduce((acc, planta) => acc + planta.precio, 0);
+    document.getElementById("totalValor").innerText = `Total: $${totalValor} ARS`;
 }
 
 contenidoPlantas();
 botonCarrito();
-
+actualizarTotalValor();
