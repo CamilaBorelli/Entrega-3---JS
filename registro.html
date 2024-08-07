@@ -15,7 +15,7 @@
     <div class="container my-5">
         <div class="row">
             <div class="col">
-                <a href="index.html"><img src="/images/logoplanta2.webp" alt="logo de planta" width="100">
+                <a href="index.html"><img src="/images/logoplanta1.png" alt="logo de planta" width="100">
                 </a>
             </div>
             <div class="col d-flex align-items-center">
@@ -49,21 +49,26 @@
             </section>
 
             <div>
-                <form>
+                <form id="registroForm">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="text-success form-label">Email*</label>
-                        <input type="email" placeholder="Ingresá tu email" class="form-control" id="exampleInputEmail1"
+                        <label for="nombre" class="text-success form-label">Nombre*</label>
+                        <input type="text" placeholder="Ingresá tu nombre" class="form-control" id="nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="text-success form-label">Email*</label>
+                        <input type="email" placeholder="Ingresá tu email" class="form-control" id="email"
                             aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="text-success form-label">Contraseña*</label>
-                        <input type="password" placeholder="Ingresá tu contraseña"class="form-control" id="exampleInputPassword1">
+                        <label for="contraseña" class="text-success form-label">Contraseña*</label>
+                        <input type="password" placeholder="Tu contraseña debe tener al menos 6 caracteres" class="form-control" id="contraseña">
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input " id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Autorizo el uso de mis datos de acuerdo a las Políticas de Privacidad y acepto los Términos y Condiciones</label>
+                        <label class="form-check-label" for="exampleCheck1">Autorizo el uso de mis datos de acuerdo
+                            a las Políticas de Privacidad y acepto los Términos y Condiciones</label>
                     </div>
-                    <button type="submit" class="btn btn-success">Registrarme</button>
+                    <button type="submit" id="registro" class="btn btn-success">Registrarme</button>
                 </form>
             </div>
 
@@ -74,6 +79,7 @@
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <script src="index.js"></script>
             <script src="carrito.js"></script>
+            <script src="registro.js"></script>
 </body>
 
 </html>

@@ -78,8 +78,9 @@ function eliminarCarrito() {
 function actualizarTotalValor() {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     let totalValor = carrito.reduce((acc, planta) => acc + planta.precio, 0);
-    document.getElementById("totalValor").innerText = `Total: $${totalValor} ARS`;
+    document.getElementById("totalValor").innerText= `Total: $${totalValor} ARS`;
 }
+
 
 contenidoPlantas();
 botonCarrito();

@@ -24,10 +24,9 @@ function contenidoCarrito() {
        <h4 <i class="bi bi-bag-dash"></i> El carrito está vacío </h4>
       </div>`;
     }
-
-
-
     document.getElementById("contenidoHTML").innerHTML = informacionPlantas;
 }
+
+
 
 contenidoCarrito();
