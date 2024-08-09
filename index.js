@@ -32,7 +32,7 @@ function agregarPlanta(id) {
     carrito.push(planta);
     localStorage.setItem("carrito", JSON.stringify(carrito));
     Swal.fire({
-        text: "Se ha añadido al carrito",
+        text: "Se ha añadido tu producto al carrito",
         icon: "success"
     });
     botonCarrito();
@@ -78,7 +78,7 @@ function eliminarCarrito() {
 function actualizarTotalValor() {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     let totalValor = carrito.reduce((acc, planta) => acc + planta.precio, 0);
-    document.getElementById("totalValor").innerText= `Total: $${totalValor} ARS`;
+    document.getElementById("totalValor").innerText = `Total: $${totalValor} ARS`;
 }
 
 

@@ -7,7 +7,7 @@ document.getElementById('registroForm').addEventListener('submit', function (eve
 
     if (validarDatos(nombre, email, contraseña)) {
         Swal.fire({
-            text: "Tu registro fue realizado correctamente",
+            text: "Tu registro fue realizado correctamente. Gracias por tu compra!",
             icon: "success"
         });
 
@@ -44,4 +44,4 @@ function validarDatos(nombre, email, contraseña) {
 }
 
 
-
+botonCarrito()

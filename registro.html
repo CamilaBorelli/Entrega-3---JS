@@ -15,44 +15,39 @@
     <div class="container my-5">
         <div class="row">
             <div class="col">
-                <a href="index.html"><img src="/images/logoplanta1.png" alt="logo de planta" width="100">
+                <a href="index.html"><img src="images/logoplanta1.png" alt="logo de planta" width="100">
                 </a>
             </div>
-            <div class="col d-flex align-items-center">
+            <div class="align-items-center">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
                         <a class="nav-link active text-dark" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Interior</a>
+                        <a class="nav-link active text-dark" href="registro.html">Registrate</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Exterior</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="registro.html">Registrate</a>
+                        <a href="carrito.html" class="nav-link active text-dark text-decoration-none">
+                            <i class="bi bi-cart"></i>(<span id="totalPlantas"></span>)Carrito</a>
                     </li>
                 </ul>
             </div>
-            <div class="col d-flex align-items-center justify-content-end">
-                <a href="carrito.html" class="text-dark text-decoration-none">
-                    <i class="bi bi-cart"></i> (<span id="totalPlantas"></span>)
-                </a>
-            </div>
+        </div>
+    </div>
 
 
-            <!-- Sección Contacto -->
+            <!-- Sección Registro -->
 
             <section class="text-success-emphasis text-center">
-                <h1>Registrate</h1>
+                <h1 >Registrate</h1>
                 <p>Completá con tus datos el siguiente formulario y finalizá tu compra!</p>
             </section>
 
-            <div>
+            <div >
                 <form id="registroForm">
                     <div class="mb-3">
-                        <label for="nombre" class="text-success form-label">Nombre*</label>
-                        <input type="text" placeholder="Ingresá tu nombre" class="form-control" id="nombre">
+                        <label for="nombre" class="text-success form-label">Nombre y Apellido*</label>
+                        <input type="text" placeholder="Ingresá tu nombre y apellido" class="form-control" id="nombre">
                     </div>
                     <div class="mb-3">
                         <label for="email" class="text-success form-label">Email*</label>
@@ -61,15 +56,27 @@
                     </div>
                     <div class="mb-3">
                         <label for="contraseña" class="text-success form-label">Contraseña*</label>
-                        <input type="password" placeholder="Tu contraseña debe tener al menos 6 caracteres" class="form-control" id="contraseña">
+                        <input type="password" placeholder="Tu contraseña debe tener al menos 6 caracteres"
+                            class="form-control" id="contraseña">
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input " id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Autorizo el uso de mis datos de acuerdo
                             a las Políticas de Privacidad y acepto los Términos y Condiciones</label>
                     </div>
-                    <button type="submit" id="registro" class="btn btn-success">Registrarme</button>
+                    <button type="submit" id="registro" class="btn btn-success">Registrarme y finalizar mi
+                        compra</button>
                 </form>
+            </div>
+
+
+            <!--Sección Footer-->
+
+            <div class="container">
+                <footer class="py-3 my-4 bg-gradient">
+                    <p class="text-center text-body-secondary border-top">&copy; PLANTIN 2024 DEVELOP BY CAMILA BORELLI. DIGITAL &
+                        E-COMMERCE SOLUTIONS.</p>
+                </footer>
             </div>
 
 

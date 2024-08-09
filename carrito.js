@@ -20,13 +20,24 @@ function contenidoCarrito() {
         informacionPlantas += `</tbody>
 </table>`;
     } else {
-        informacionPlantas = `<div class="alert alert-danger" role="alert">
-       <h4 <i class="bi bi-bag-dash"></i> El carrito está vacío </h4>
+        informacionPlantas = `<div class="align-items-center alert alert-success" role="alert">
+       <h4 <i class="bi bi-cart-dash align-items-center"></i>El carrito está vacío </h4>
       </div>`;
     }
     document.getElementById("contenidoHTML").innerHTML = informacionPlantas;
 }
 
+const boton = document.getElementById('finalizarCompra');
 
+boton.addEventListener('click', function() {
+    Swal.fire({
+        icon: "warning",
+        title: "Oops...",
+        text: "Para finalizar tu compra debes registrarte!",
+        footer: '<a href="registro.html">¡ME QUIERO REGISTRAR!</a>'
+    });
+
+    localStorage.removeItem("carrito");
+});
 
 contenidoCarrito();
