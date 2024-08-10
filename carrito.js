@@ -29,7 +29,7 @@ function contenidoCarrito() {
 
 const boton = document.getElementById('finalizarCompra');
 
-boton.addEventListener('click', function() {
+boton.addEventListener('click', function () {
     Swal.fire({
         icon: "warning",
         title: "Oops...",

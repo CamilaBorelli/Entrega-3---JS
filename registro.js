@@ -7,11 +7,18 @@ document.getElementById('registroForm').addEventListener('submit', function (eve
 
     if (validarDatos(nombre, email, contraseña)) {
         Swal.fire({
-            text: "Tu registro fue realizado correctamente. Gracias por tu compra!",
-            icon: "success"
+            title: '¡Perfecto!',
+            text: 'Tu compra fue realizada. ¡Muchas gracias!',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "index.html";
+            }
         });
 
         document.getElementById('registroForm').reset();
+
     }
 });
 
